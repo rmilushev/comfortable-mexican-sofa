@@ -83,6 +83,10 @@ class ComfortableMexicanSofa::FormBuilder < BootstrapForm::FormBuilder
   def page_rich_text(tag, index)
     default_tag_field(tag, index, :text_area_tag, :data => {'cms-rich-text' => true})
   end
+  
+  def page_haml(tag, index)
+     default_tag_field(tag, index, :text_area_tag, :data => {'cms-cm-mode' => 'text/x-haml'})
+  end
 
   def page_file(tag, index)
     default_tag_field(tag, index, :file_field_tag)
